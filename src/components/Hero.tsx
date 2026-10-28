@@ -20,18 +20,38 @@ function getTargetTime(x: number, y: number): number {
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
+    let targetTime = getTargetTime(0.5, 0.5);
+    let currentTime = targetTime;
+    let frameId = 0;
+    let lastFrame = performance.now();
+
     function handleMove(event: PointerEvent) {
       const x = event.clientX / window.innerWidth;
       const y = event.clientY / window.innerHeight;
+      targetTime = getTargetTime(x, y);
+    }
+
+    function tick(now: number) {
+      const dt = Math.min((now - lastFrame) / 1000, 0.1);
+      lastFrame = now;
+      currentTime += (targetTime - currentTime) * (1 - Math.exp(-dt * 7));
+
       const video = videoRef.current;
-      if (video && video.duration) {
-        video.currentTime = getTargetTime(x, y);
+      if (video && video.duration && !video.seeking) {
+        video.currentTime = currentTime;
       }
+      frameId = requestAnimationFrame(tick);
     }
 
     window.addEventListener("pointermove", handleMove);
-    return () => window.removeEventListener("pointermove", handleMove);
+    frameId = requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener("pointermove", handleMove);
+      cancelAnimationFrame(frameId);
+    };
   }, []);
+
   return (
     <section className="hero" id="top">
       <video
