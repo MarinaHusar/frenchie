@@ -1,12 +1,14 @@
 export function Hero() {
   return (
-    <section id="top">
+    <section className="hero" id="top">
       <h1>Er schaut, wohin du schaust.</h1>
-      <p>
+      <p className="hero-text">
         Halsbänder für Hunde mit Charakter. Handgenäht, pflanzlich gegerbt, mit
         Messingschild.
       </p>
-      <a href="kollektion">Kollektion ansehen</a>
+      <a className="cta" href="#kollektion">
+        Kollektion ansehen
+      </a>
     </section>
   );
 }
