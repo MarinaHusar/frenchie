@@ -1,7 +1,23 @@
+import { useEffect, useRef } from "react";
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    function handleMove(event: PointerEvent) {
+      const x = event.clientX / window.innerWidth;
+      const y = event.clientY / window.innerHeight;
+      const video = videoRef.current;
+      if (video && video.duration) {
+        video.currentTime = x * video.duration;
+      }
+    }
+
+    window.addEventListener("pointermove", handleMove);
+    return () => window.removeEventListener("pointermove", handleMove);
+  }, []);
   return (
     <section className="hero" id="top">
       <video
+        ref={videoRef}
         className="hero-video"
         src="/frenchie.mp4"
         muted
