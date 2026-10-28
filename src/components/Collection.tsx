@@ -12,16 +12,18 @@ const products = [
 
 export function Collection() {
   return (
-    <section id="kollektion">
+    <section className="collection" id="kollektion">
       <h2>Drei Halsbänder, ein Anspruch.</h2>
-      {products.map((product) => (
-        <ProductCard
-          key={product.name}
-          name={product.name}
-          material={product.material}
-          price={product.price}
-        />
-      ))}
+      <div className="products">
+        {products.map((product) => (
+          <ProductCard
+            key={product.name}
+            name={product.name}
+            material={product.material}
+            price={product.price}
+          />
+        ))}
+      </div>
     </section>
   );
 }

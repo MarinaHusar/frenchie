@@ -59,3 +59,28 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
+.collection {
+  padding: 96px 56px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.card {
+  background: var(--studio);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.card p {
+  margin: 0 0 8px;
+  color: #4b5058;
+}

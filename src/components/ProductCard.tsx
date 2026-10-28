@@ -6,7 +6,7 @@ type ProductCardProps = {
 
 export function ProductCard({ name, material, price }: ProductCardProps) {
   return (
-    <article>
+    <article className="card">
       <h3>{name}</h3>
       <p>{material}</p>
       <p>{price} €</p>
