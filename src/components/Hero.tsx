@@ -1,4 +1,22 @@
 import { useEffect, useRef } from "react";
+const ANCHORS = [
+  [1.5, 6.5, 7.2],
+  [2.5, 5.8, 7.2],
+  [3.5, 4.3, 8.6],
+];
+function getTargetTime(x: number, y: number): number {
+  const gx = Math.min(Math.max(x, 0), 1) * 2;
+  const gy = Math.min(Math.max(y, 0), 1) * 2;
+  const col = Math.min(Math.floor(gx), 1);
+  const row = Math.min(Math.floor(gy), 1);
+  const fx = gx - col;
+  const fy = gy - row;
+
+  const top = ANCHORS[row][col] * (1 - fx) + ANCHORS[row][col + 1] * fx;
+  const bottom =
+    ANCHORS[row + 1][col] * (1 - fx) + ANCHORS[row + 1][col + 1] * fx;
+  return top * (1 - fy) + bottom * fy;
+}
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
@@ -7,7 +25,7 @@ export function Hero() {
       const y = event.clientY / window.innerHeight;
       const video = videoRef.current;
       if (video && video.duration) {
-        video.currentTime = x * video.duration;
+        video.currentTime = getTargetTime(x, y);
       }
     }
 
