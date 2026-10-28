@@ -63,13 +63,15 @@ export function Hero() {
         preload="auto"
       />
       <h1>Er schaut, wohin du schaust.</h1>
-      <p className="hero-text">
-        Halsbänder für Hunde mit Charakter. Handgenäht, pflanzlich gegerbt, mit
-        Messingschild.
-      </p>
-      <a className="cta" href="#kollektion">
-        Kollektion ansehen
-      </a>
+      <div className="hero-aside">
+        <p className="hero-text">
+          Halsbänder für Hunde mit Charakter. Handgenäht, pflanzlich gegerbt,
+          mit Messingschild.
+        </p>
+        <a className="cta" href="#kollektion">
+          Kollektion ansehen
+        </a>
+      </div>
     </section>
   );
 }
