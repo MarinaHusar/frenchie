@@ -1,12 +1,12 @@
 export function Header() {
   return (
     <header>
-      {<a href="#top">Frenchie.</a>}
+      <a href="#top">Frenchie.</a>
 
       <nav>
-        <a href="#kollektion"></a>
-        <a href="#handwerk"></a>
-        <a href="#groesse"></a>
+        <a href="#kollektion">Halsbänder</a>
+        <a href="#handwerk">Handwerk</a>
+        <a href="#groesse">Größenberater</a>
       </nav>
     </header>
   );
