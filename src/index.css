@@ -141,6 +141,10 @@ h3,
   color: #b6bbc3;
 }
 .advisor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
   padding: 96px 56px;
 }
 
@@ -162,6 +166,13 @@ h3,
 }
 
 .advisor p {
+  max-width: 420px;
+  margin: 24px 0 0;
+  padding: 18px 20px;
+  background: var(--studio);
+  border-radius: 16px;
+}
+.advisor-result {
   max-width: 420px;
   margin: 24px 0 0;
   padding: 18px 20px;
@@ -246,4 +257,35 @@ h3,
 .card-button:hover {
   background: var(--ink);
   color: var(--paper);
+}
+.advisor-lead {
+  max-width: 420px;
+  margin: 16px 0 0;
+  color: #4b5058;
+  line-height: 1.6;
+}
+
+.size-table {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 28px;
+  border-collapse: collapse;
+}
+
+.size-table th,
+.size-table td {
+  padding: 12px 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(21, 23, 27, 0.14);
+}
+
+.size-table th {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5058;
+}
+
+.size-table .active td {
+  color: var(--brass);
+  font-weight: 600;
 }
