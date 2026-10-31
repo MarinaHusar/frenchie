@@ -114,3 +114,26 @@ h3,
 .logo {
   font-family: "Bricolage Grotesque", Arial, sans-serif;
 }
+.handwerk {
+  padding: 96px 56px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.fact h3 {
+  margin: 0 0 8px;
+  color: #e2b560;
+  font-size: 24px;
+}
+
+.fact p {
+  margin: 0;
+  color: #b6bbc3;
+}
