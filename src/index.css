@@ -9,7 +9,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, sans-serif;
+  font-family: "Instrument Sans", Arial, sans-serif;
 }
 .header {
   display: flex;
@@ -107,4 +107,10 @@ body {
   top: 96px;
   right: 56px;
   max-width: 260px;
+}
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Bricolage Grotesque", Arial, sans-serif;
 }
