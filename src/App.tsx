@@ -3,7 +3,7 @@ import { Hero } from "./components/Hero";
 import { Collection } from "./components/Collection";
 import { Handwerk } from "./components/Handwerk";
 import { SizeAdvisor } from "./components/SizeAdvisor";
-
+import { Dedication } from "./components/Dedication";
 function App() {
   return (
     <>
@@ -12,6 +12,7 @@ function App() {
       <Collection />
       <Handwerk />
       <SizeAdvisor />
+      <Dedication />
     </>
   );
 }
