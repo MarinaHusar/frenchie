@@ -1,13 +1,24 @@
 import { ProductCard } from "./ProductCard";
 
 const products = [
-  { name: "Noir", material: "Schwarzes Rindleder, Messingschnalle", price: 49 },
+  {
+    name: "Noir",
+    material: "Schwarzes Rindleder, Messingschnalle",
+    price: 49,
+    image: "/products/noir.jpg",
+  },
   {
     name: "Cognac",
     material: "Naturbraunes Leder, Messingschnalle",
+    image: "/products/cognac.jpg",
     price: 49,
   },
-  { name: "Sauge", material: "Salbeigrün gefärbt, Messingschnalle", price: 54 },
+  {
+    name: "Sauge",
+    material: "Salbeigrün gefärbt, Messingschnalle",
+    price: 54,
+    image: "/products/sauge.jpg",
+  },
 ];
 
 export function Collection() {
@@ -21,6 +32,7 @@ export function Collection() {
             name={product.name}
             material={product.material}
             price={product.price}
+            image={product.image}
           />
         ))}
       </div>

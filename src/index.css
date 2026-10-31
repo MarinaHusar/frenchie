@@ -211,3 +211,12 @@ h3,
   text-decoration: none;
   font-weight: 600;
 }
+.card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
