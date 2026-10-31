@@ -2,6 +2,8 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Collection } from "./components/Collection";
 import { Handwerk } from "./components/Handwerk";
+import { SizeAdvisor } from "./components/SizeAdvisor";
+
 function App() {
   return (
     <>
@@ -9,6 +11,7 @@ function App() {
       <Hero />
       <Collection />
       <Handwerk />
+      <SizeAdvisor />
     </>
   );
 }
