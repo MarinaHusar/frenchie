@@ -4,6 +4,7 @@ import { Collection } from "./components/Collection";
 import { Handwerk } from "./components/Handwerk";
 import { SizeAdvisor } from "./components/SizeAdvisor";
 import { Dedication } from "./components/Dedication";
+import { Footer } from "./components/Footer";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Handwerk />
       <SizeAdvisor />
       <Dedication />
+      <Footer />
     </>
   );
 }
