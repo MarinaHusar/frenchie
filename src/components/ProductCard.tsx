@@ -21,6 +21,9 @@ export function ProductCard({
       <h3>{name}</h3>
       <p>{material}</p>
       <p>{price} €</p>
+      <button className="card-button" type="button">
+        In den Warenkorb
+      </button>
     </article>
   );
 }
